@@ -17,6 +17,13 @@ ul li {
   display: inline;
   list-style-type: none;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: white;
+}
 #signup {
   position: fixed;
   float: right;
@@ -26,6 +33,10 @@ ul li {
   border: none;
   color: #053d63;
   background: #ffffff;
+}
+#signup:hover {
+  color: #ffffff;
+  background: #053d63;
 }
 .login {
   background: #053d63;
@@ -38,6 +49,10 @@ ul li {
   display: block;
   margin: auto;
   margin-top: 5%;
+}
+.login:hover {
+  color: #053d63;
+  background: #ffffff;
 }
 footer {
   background: black;

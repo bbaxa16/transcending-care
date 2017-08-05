@@ -1,3 +1,56 @@
+* {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
 body {
-  background: blue;
+  background-image: url('http://cdn.pcwallart.com/images/gradient-wallpaper-4.jpg');
+  margin: 0%;
+}
+header {
+  text-align: center;
+}
+ul li {
+  display: inline;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: white;
+}
+footer {
+  text-align: center;
+  height: 15%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#footer0 {
+  font-size: smaller;
+  position: fixed;
+  margin-left: 31%;
+}
+#footer1 {
+    background: #F5A9B8;
+    height: 33%;
+    width: 100%;
+}
+#footer2 {
+  background: #FFFFFF;
+  height: 33%;
+  width: 100%;
+}
+#footer3 {
+  background: #5BCEFA;
+  height: 33%;
+  width: 100%;
+}
+#cp {
+  font-size: 5px;
+  float: right;
+  margin-top: -1.5%;
+  margin-right: 1%;
 }

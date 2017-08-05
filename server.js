@@ -4,8 +4,10 @@ const Mongoose = require('mongoose')
 const BodyParser = require('body-parser')
 const MethodOverride = require('method-override')
 const usersController = require('./controllers/users')
+const selfcareboardsController = require('./controllers/selfcareboards')
 //middleware
 app.use('/users', usersController)
+app.use('/selfcareboards', selfcareboardsController)
 app.use(express.static('public'))
 
 
