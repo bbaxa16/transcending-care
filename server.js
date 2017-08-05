@@ -4,6 +4,13 @@ const Mongoose = require('mongoose')
 const BodyParser = require('body-parser')
 const MethodOverride = require('method-override')
 
+//middleware
+app.use(express.static('public'))
+
+
+
+
+//Route to landing page
 app.get('/', (req, res)=> {
   res.render('index.ejs')
 })
