@@ -1,3 +1,47 @@
 body {
-  background: blue;
+  background-image: url('http://geodavephotography.com/images/relaxing-wallpaper/36837666-relaxing-wallpaper.jpg');
+  background-size: cover;
+  background-position: top;
+  margin: 0%;
+}
+header {
+  text-align: center;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+h1 {
+  margin-top: -1%;
+}
+ul li {
+  display: inline;
+  list-style-type: none;
+}
+button {
+  background: #053d63;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 100%;
+  padding: 2% 5% 2% 5%;
+  text-decoration: none;
+  border: 1px solid #053d63;
+  display: block;
+  margin: auto;
+}
+footer {
+  background: black;
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#cp {
+  font-size: 5px;
+  float: right;
+  margin-top: -1.5%;
+  margin-right: 1%;
 }
