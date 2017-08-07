@@ -1,9 +1,9 @@
 const express = require('express')
-const selfcareboards = express.Router()
+const selfcareboard = express.Router()
 
 
-selfcareboards.get('/', (req, res)=> {
+selfcareboard.get('/', (req, res)=> {
   res.send('sup')
 })
 
-module.exports = selfcareboards
+module.exports = selfcareboard

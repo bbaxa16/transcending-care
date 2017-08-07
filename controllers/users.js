@@ -20,5 +20,13 @@ users.post('/', (req, res)=> {
 users.get('/new', (req, res)=> {
   res.render('users/new.ejs')
 })
+//Route for user show page
+users.get('/:id', (req, res)=> {
+  User.findById(req.params.id, (err, foundUser)=> {
+    res.render('users/show.ejs', {
+      user: foundUser
+    })
+  })
+})
 
 module.exports = users;

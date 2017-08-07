@@ -19,7 +19,7 @@
     </header>
     <section>
       <% for(let i = 0; i < users.length; i++){%>
-        <%=users[i].name%>
+      <a href='<%=users[i]._id%>'>  <%=users[i].name%> </a>
       <%}%>
     </section>
     <footer>

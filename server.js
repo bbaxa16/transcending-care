@@ -18,7 +18,7 @@ app.use(session({
 }))
 const usersController = require('./controllers/users')
 app.use('/users', usersController)
-//const selfcareboardsController = require('./controllers/selfcareboards')
+//const selfcareboardsController = require('./controllers/selfcareboard')
 //app.use('/selfcareboards', selfcareboardsController)
 //const sessionsController = require('./controllers/session.js')
 //app.use('/sessions', sessionsController)
