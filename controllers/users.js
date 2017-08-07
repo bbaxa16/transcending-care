@@ -28,5 +28,20 @@ users.get('/:id', (req, res)=> {
       })
     })
   })
+//Route to get to edit page
+users.get('/:id/edit', (req, res)=> {
+  User.findById(req.params.id, (err, foundUser)=> {
+    res.render('users/edit.ejs', {
+      user: foundUser
+    })
+  })
+})
+
+//Route to delete users
+users.delete('/:id', (req, res)=> {
+  User.findByIdAndRemove(req.params.id, ()=> {
+     res.redirect('/users')
+  })
+})
 
 module.exports = users;

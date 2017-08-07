@@ -6,5 +6,8 @@
   </head>
   <body>
     <h1>show page for <%=user.name%></h1>
+    <form action="/users/<%=user._id%>?_method=DELETE" method="post">
+      <input type="submit" name="" value="Delete User">
+    </form>
   </body>
 </html>

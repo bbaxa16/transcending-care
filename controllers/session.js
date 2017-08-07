@@ -39,7 +39,7 @@ router.post('/login', (req, res, next)=> {
 router.post('/register', (req, res, next)=> {
   //hash the password
   const password = req.body.password
-  const passwordHash = bcrypt.hashSync(password, bcyrpt.genSaltSync(10))
+  const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10))
 
   //create an object for db entry
   const userDbEntry = {}
