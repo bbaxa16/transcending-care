@@ -19,11 +19,10 @@
     </header>
     <section>
       <% for(let i = 0; i < users.length; i++){%>
-      <div>
-      <a href='<%=users[i]._id%>'>  <%=users[i].name%> </a>
-      </div>
-      <div>
-      <a href='<%=users[i]._id%>'>  <%=users[i].image%> </a>
+      <div class='users'>
+      <a href='/users/<%=users[i]._id%>'>  <%=users[i].name%> </a><br/>
+      <a href='/users/<%=users[i]._id%>'>  <img src="<%=users[i].image%>"></a><br/>
+      <%=users[i].pronouns%>
       </div>
       <%}%>
     </section>
