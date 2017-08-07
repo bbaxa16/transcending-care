@@ -19,7 +19,7 @@ app.use(session({
 const usersController = require('./controllers/users')
 app.use('/users', usersController)
 const selfcareboardsController = require('./controllers/selfcareboard')
-//app.use('/selfcareboard', selfcareboardsController)
+app.use('/selfcare', selfcareboardsController)
 const sessionsController = require('./controllers/session.js')
 app.use('/sessions', sessionsController)
 app.use(express.static('public'))
