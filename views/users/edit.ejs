@@ -5,6 +5,15 @@
     <title></title>
   </head>
   <body>
-    <h1>edit page for <%=user._id%></h1>
+    <h1>edit <%=user.name%></h1>
+    <form action="/users/<%=user._id%>?_method=PUT" method="post">
+      Name: <input type="text" name="name" value="<%=user.name%>"><br/>
+      Pronouns: <input type="text" name="pronouns" value="<%=user.pronouns%>"><br/>
+      Profile Picture: <input type="text" name="image" value="<%=user.image%>"><br/>
+      Age: <input type="text" name="age" value="<%=user.age%>"><br/>
+      <br/>
+      <input type="submit" name="" value="update profile">
+
+    </form>
   </body>
 </html>

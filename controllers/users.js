@@ -36,7 +36,12 @@ users.get('/:id/edit', (req, res)=> {
     })
   })
 })
-
+//Put route for updating user
+users.put('/:id', (req, res)=> {
+  User.findByIdAndUpdate(req.params.id, req.body, ()=>{
+    res.redirect('/users')
+  })
+})
 //Route to delete users
 users.delete('/:id', (req, res)=> {
   User.findByIdAndRemove(req.params.id, ()=> {
