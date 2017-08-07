@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const Mongoose = require('mongoose')
+const mongoose = require('mongoose')
 const BodyParser = require('body-parser')
 const MethodOverride = require('method-override')
 const session = require('express-session')
@@ -20,8 +20,8 @@ const usersController = require('./controllers/users')
 app.use('/users', usersController)
 //const selfcareboardsController = require('./controllers/selfcareboards')
 //app.use('/selfcareboards', selfcareboardsController)
-const sessionsController = require('./controllers/session.js')
-app.use('/sessions', sessionsController)
+//const sessionsController = require('./controllers/session.js')
+//app.use('/sessions', sessionsController)
 app.use(express.static('public'))
 
 
@@ -30,6 +30,15 @@ app.use(express.static('public'))
 //Route to landing page
 app.get('/', (req, res)=> {
   res.render('index.ejs')
+})
+
+//Connecting to mongo
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/transcending-care';
+
+mongoose.connect(mongoUri)
+
+mongoose.connection.once('open', ()=> {
+  console.log('mongoin');
 })
 
 app.listen(3000, ()=> {
