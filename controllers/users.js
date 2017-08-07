@@ -23,10 +23,10 @@ users.get('/new', (req, res)=> {
 //Route for user show page
 users.get('/:id', (req, res)=> {
   User.findById(req.params.id, (err, foundUser)=> {
-    res.render('users/show.ejs', {
-      user: foundUser
+      res.render('users/show.ejs', {
+        user: foundUser
+      })
     })
   })
-})
 
 module.exports = users;
