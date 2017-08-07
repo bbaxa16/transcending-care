@@ -3,7 +3,7 @@ const selfcareboard = express.Router()
 
 
 selfcareboard.get('/', (req, res)=> {
-  res.send('sup')
+  res.render('selfcare/index.ejs')
 })
 
 module.exports = selfcareboard
