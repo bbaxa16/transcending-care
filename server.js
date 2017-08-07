@@ -6,6 +6,11 @@ const MethodOverride = require('method-override')
 const session = require('express-session')
 
 //middleware
+
+app.use(MethodOverride('_method'))
+app.use(BodyParser.urlencoded({extended: false}))
+
+
 app.use(session({
   secret: 'hi',
   resave: false,
