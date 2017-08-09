@@ -2,39 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow">
+
     <link rel="stylesheet" href="/css/users/index.css">
-    <title></title>
+    <% include ../partials/head.ejs%>
   </head>
   <body>
     <header>
-      <h1>contributors</h1>
-      <nav>
-        <ul>
-          <li><a href="/">home</a></li> |
-          <li><a href="/users">users</a></li> |
-          <li><a href="/selfcare">self care board</a></li>
-        </ul>
-      </nav>
+      <h1>transcending care</h1>
+      <a href='/sessions/logout'><button id="logout">log out</button></a>
+      <% include ../partials/header.ejs %>
     </header>
-    <a href='/sessions/logout'><button>log out</button></a>
+
     <section>
       <% for(let i = 0; i < users.length; i++){%>
       <div class='users'>
-      <a href='/users/<%=users[i]._id%>'>  <%=users[i].name%> </a><br/>
-      <a href='/users/<%=users[i]._id%>'>  <img src="<%=users[i].image%>"></a><br/>
-      <%=users[i].pronouns%>
+      <a class='showpage' href='/users/<%=users[i]._id%>'>
+      <%=users[i].name%>: <%=users[i].pronouns%><br/>
+      <img src="<%=users[i].image%>"><br/>
+      </a>
       </div>
       <%}%>
     </section>
     <footer>
-      <div id='footer0'>a self care app for <br/> transgender | non-binary | gender non-conforming people</div>
-      <div id='footer1'></div>
-      <div id='footer2'></div>
-      <div id='footer3'></div>
-      <div id='cp'>
-        Copyright (c) 2017 Copyright Holder All Rights Reserved.
-      </div>
+      <% include ../partials/footer.ejs %>
     </footer>
   </body>
 </html>

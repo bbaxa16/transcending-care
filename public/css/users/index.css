@@ -2,58 +2,78 @@
   font-family: 'PT Sans Narrow', sans-serif;
 }
 body {
-  background-image: url('http://cdn.pcwallart.com/images/gradient-wallpaper-4.jpg');
-  margin: 0%;
+  background-color: #053d63;
+  background-image: url('http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg');
+  background-size: cover;
+  text-align: center;
+  color: #053d63;
 }
 header {
   text-align: center;
+  color: white;
+}
+h1 {
+  margin-top: -1%;
+}
+#logout {
+  position: fixed;
+  float: right;
+  margin-top: -3%;
+  margin-left: 32%;
+  border-radius: 28px;
+  border: none;
+  color: #053d63;
+  background: #ffffff;
+}
+#logout:hover {
+  color: #ffffff;
+  background: #053d63;
 }
 ul li {
   display: inline;
   list-style-type: none;
 }
-a {
+.nav {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
-a:hover {
-  color: white;
+.nav:hover {
+  color: #053d63;
 }
 section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: auto;
 }
 .users {
   margin: 2%;
+  width: 25%;
+  height: 25%;
+}
+.showpage {
+  text-decoration: none;
+  color: #053d63;
+}
+.showpage:hover {
+  color: #ffffff;
+}
+img {
+  width: 75%;
+  height: 75%;
+  border-radius: 2%;
 }
 footer {
+  background: black;
+  color: white;
+  font-size: smaller;
   text-align: center;
-  height: 15%;
+  margin: auto;
   width: 100%;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
-}
-#footer0 {
-  font-size: smaller;
-  position: fixed;
-  margin-left: 31%;
-}
-#footer1 {
-    background: #F5A9B8;
-    height: 33%;
-    width: 100%;
-}
-#footer2 {
-  background: #FFFFFF;
-  height: 33%;
-  width: 100%;
-}
-#footer3 {
-  background: #5BCEFA;
-  height: 33%;
-  width: 100%;
 }
 #cp {
   font-size: 5px;
