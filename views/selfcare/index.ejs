@@ -7,5 +7,11 @@
   <body>
     <h1>index page for self care tiles</h1>
     <a href="/selfcare/new"><button>New Self Care Tile</button></a>
+    <% for(let i = 0; i < selfcare.length; i++){%>
+      <div class='tiles'>
+        <%=selfcare[i].title%><br/>
+        <%=selfcare[i].description%>
+      </div>
+    <% } %>
   </body>
 </html>

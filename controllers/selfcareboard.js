@@ -1,9 +1,21 @@
 const express = require('express')
 const selfcareboard = express.Router()
+const Selfcare = require('../models/selfcare.js')
 
 //Route for index to self care tiles
 selfcareboard.get('/', (req, res)=> {
-  res.render('selfcare/index.ejs')
+  Selfcare.find({}, (err, foundSelfcare)=> {
+    res.render('selfcare/index.ejs', {
+      selfcare: foundSelfcare
+    })
+  })
+})
+//Post route for creating a new self care tile
+selfcareboard.post('/', (req, res)=> {
+
+  Selfcare.create(req.body, (err, createdSelfcare)=> {
+    res.redirect('/selfcare')
+  })
 })
 //Route to create a new self care tile
 selfcareboard.get('/new', (req, res)=> {
