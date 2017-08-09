@@ -2,10 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="/css/users/show.css">
+    <% include ../partials/head.ejs %>
   </head>
   <body>
-    <h1>show page for <%=user.age%></h1>
-    <a href="/users/<%=user._id%>/edit"><button>edit</button></a>
+    <header>
+      <h1>transcending care</h1>
+      <a href='/sessions/logout'>  <button id="logout">log out</button></a>
+      <% include ../partials/header.ejs %>
+    </header>
+    <div class="info">
+      <%=user.name%> (<%=user.pronouns%>)<br/>
+      <%=user.age%> years old<br/>
+      <img src='<%=user.image%>'>
+    </div>
+    <a href="/users/<%=user._id%>/edit"><button id='update'>edit</button></a>
+    <footer>
+      <% include ../partials/footer.ejs %>
+    </footer>
   </body>
 </html>
