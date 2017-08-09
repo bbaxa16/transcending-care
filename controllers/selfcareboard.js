@@ -31,6 +31,22 @@ selfcareboard.get('/:id', (req, res)=> {
 })
 //Route to edit a self care tile.
 selfcareboard.get('/:id/edit', (req, res)=> {
-  res.render('selfcare/edit.ejs')
+  Selfcare.findById(req.params.id, (err, foundSelfcare)=> {
+      res.render('selfcare/edit.ejs', {
+        selfcare: foundSelfcare
+      })
+  })
+})
+//Put route to edit tile
+selfcareboard.put('/:id', (req, res)=> {
+  Selfcare.findByIdAndUpdate(req.params.id, req.body, ()=> {
+    res.redirect('/selfcare')
+  })
+})
+//Route to delete a self care tile
+selfcareboard.delete('/:id', (req, res)=>{
+  Selfcare.findByIdAndRemove(req.params.id, ()=> {
+    res.redirect('/selfcare')
+  })
 })
 module.exports = selfcareboard
