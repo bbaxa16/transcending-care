@@ -1,0 +1,59 @@
+* {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+body {
+  background-image: url('http://journeymadison.com/wp-content/uploads/sites/6/2015/04/seedling.jpg');
+  background-size: cover;
+}
+header {
+  text-align: center;
+  color: #ffffff;
+}
+h1 {
+  margin-top: -1%;
+}
+ul li {
+  display: inline;
+  list-style-type: none;
+}
+.nav {
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav:hover {
+  color: #053d63;
+}
+.signup {
+  margin-top: 9%;
+  margin-left: 22%;
+  width: 20%;
+}
+#submit {
+  margin-left: 25%;
+  border-radius: 28px;
+  border: none;
+  color: #ffffff;
+  background: #053d63;
+}
+#submit:hover {
+  color: #053d63;
+  background: #ffffff;
+}
+footer {
+  background: black;
+  color: white;
+  font-size: smaller;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#cp {
+  font-size: 5px;
+  float: right;
+  margin-top: -1.5%;
+  margin-right: 1%;
+}
