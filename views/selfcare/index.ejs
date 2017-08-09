@@ -8,10 +8,10 @@
     <h1>index page for self care tiles</h1>
     <a href="/selfcare/new"><button>New Self Care Tile</button></a>
     <% for(let i = 0; i < selfcare.length; i++){%>
-      <div class='tiles'>
+    <a href="/selfcare/<%=selfcare[i]._id%>" > <div class='tiles'>
         <%=selfcare[i].title%><br/>
         <%=selfcare[i].description%>
-      </div>
+      </div></a>
     <% } %>
   </body>
 </html>

@@ -23,10 +23,14 @@ selfcareboard.get('/new', (req, res)=> {
 })
 //Route to the show page
 selfcareboard.get('/:id', (req, res)=> {
-  res.render('selfcare/edit/ejs')
+  Selfcare.findById(req.params.id, (err, foundSelfcare)=> {
+    res.render('selfcare/show.ejs', {
+      selfcare: foundSelfcare
+    })
+  })
 })
 //Route to edit a self care tile.
 selfcareboard.get('/:id/edit', (req, res)=> {
-  res.render('selfcare/show.ejs')
+  res.render('selfcare/edit.ejs')
 })
 module.exports = selfcareboard
