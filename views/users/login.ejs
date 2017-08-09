@@ -3,19 +3,31 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/users/login.css">
-    <title></title>
+    <% include ../partials/head.ejs%>
   </head>
   <body>
+    <header>
+      <h1>transcending care</h1>
+      <% include ../partials/header.ejs %>
+    </header>
     <div class="login">
     <form action='/sessions/login' method='POST'>
-      <input type="text" name="username" value=""><br/>
-      <input type="text" name="password" value=""><br/>
-      <input type="submit" name="" value="log in">
+      <input type="text" name="username" placeholder='username'><br/>
+      <input type="text" name="password" placeholder="password"><br/>
+      <br/>
+      <input id='submit'type="submit" name="" value="log in">
     </form>
     <% if (message) { %>
       <%= message %>
     <% } %>
   </div>
-    Not registered? Sign up <a href='/sessions/register'>here</a>
+  <br/>
+  <div class="register">
+    Not registered? <br/>
+    <a id='signup' href='/sessions/register'>sign up</a>
+  </div>
+    <footer>
+    <% include ../partials/footer.ejs %>
+  </footer>
   </body>
 </html>
