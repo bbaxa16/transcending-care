@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const BodyParser = require('body-parser')
 const MethodOverride = require('method-override')
 const session = require('express-session')
-
+const port = process.env.PORT || 3000
 //middleware
 
 app.use(MethodOverride('_method'))
@@ -40,6 +40,6 @@ mongoose.connection.once('open', ()=> {
   console.log('mongoin');
 })
 
-app.listen(3000, ()=> {
+app.listen(port, ()=> {
   console.log('listenin bruh');
 })
