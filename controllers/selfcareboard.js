@@ -23,7 +23,7 @@ selfcareboard.post('/', (req, res)=> {
 })
 //Route to create a new self care tile
 selfcareboard.get('/new', (req, res)=> {
-  if(req.sessions.logged){
+  if(req.session.logged){
     res.render('selfcare/new.ejs')
   } else {
     res.redirect('/sessions/login')
@@ -31,7 +31,7 @@ selfcareboard.get('/new', (req, res)=> {
 })
 //Route to the show page
 selfcareboard.get('/:id', (req, res)=> {
-  if(req.sessions.logged){
+  if(req.session.logged){
     Selfcare.findById(req.params.id, (err, foundSelfcare)=> {
       res.render('selfcare/show.ejs', {
         selfcare: foundSelfcare
@@ -43,7 +43,7 @@ selfcareboard.get('/:id', (req, res)=> {
 })
 //Route to edit a self care tile.
 selfcareboard.get('/:id/edit', (req, res)=> {
-  if(req.sessions.logged){
+  if(req.session.logged){
     Selfcare.findById(req.params.id, (err, foundSelfcare)=> {
       res.render('selfcare/edit.ejs', {
         selfcare: foundSelfcare
