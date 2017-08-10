@@ -2,16 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="/css/selfcare/index.css">
+    <% include ../partials/head.ejs %>
   </head>
   <body>
-    <h1>index page for self care tiles</h1>
-    <a href="/selfcare/new"><button>New Self Care Tile</button></a>
-    <% for(let i = 0; i < selfcare.length; i++){%>
-    <a href="/selfcare/<%=selfcare[i]._id%>" > <div class='tiles'>
-        <%=selfcare[i].title%><br/>
-        <%=selfcare[i].description%>
-      </div></a>
-    <% } %>
+    <header>
+      <h1>transcending care</h1>
+      <a href='/sessions/logout'><button id="logout">log out</button></a>
+      <% include ../partials/header.ejs %>
+    </header>
+    <h1>self care tiles</h1>
+    <a href="/selfcare/new"><button class='newpage'>New Self Care Tile</button></a>
+    <section>
+      <% for(let i = 0; i < selfcare.length; i++){%>
+      <div class='tiles'>
+        <a class='showpage'href="/selfcare/<%=selfcare[i]._id%>">
+          <%=selfcare[i].title%><br/>
+          <%=selfcare[i].description%>
+          </a>
+        </div>
+      <% } %>
+    </section>
+    <footer>
+      <% include ../partials/footer.ejs %>
+    </footer>
   </body>
 </html>
