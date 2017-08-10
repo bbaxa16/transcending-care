@@ -2,32 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <title></title>
+    <% include ./partials/head.ejs %>
   </head>
   <body>
     <header>
       <h1>transcending care</h1>
     <a href='/sessions/register'>  <button id="signup">Sign up</button></a>
-      <nav>
-        <ul>
-          <li>home</li> |
-          <li>users</li> |
-          <li>self care board</a></li>
-        </ul>
-      </nav>
+    <% include ./partials/header.ejs %>
     </header>
     <section>
     <a href='/sessions/login'><button class="login">log in</button></a>
     </section>
-    <footer>
-      <div>
-      a self care app for <br/> transgender | non-binary | gender non-conforming people
-    </div>
-    <div id='cp'>
-      Copyright (c) 2017 Copyright Holder All Rights Reserved.
-    </div>
-    </footer>
+    <% include ./partials/footer.ejs %>
   </body>
 </html>

@@ -76,6 +76,18 @@ footer {
   bottom: 0;
   left: 0;
 }
+#twitter {
+  width: 3%;
+  height: 3%;
+  margin-left: 1%;
+  margin-top: 23%;
+}
+#gmail {
+  width: 3%;
+  height: 3%;
+  margin-left: 1%;
+  margin-top: 23%;
+}
 #cp {
   font-size: 5px;
   float: right;

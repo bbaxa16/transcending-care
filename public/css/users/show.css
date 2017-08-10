@@ -64,6 +64,10 @@ img {
   color: #053d63;
   background: #ffffff;
 }
+section {
+  width: 35%;
+  margin: auto;
+}
 footer {
   background: black;
   color: white;
@@ -75,6 +79,19 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: -1;
+}
+#twitter {
+  width: 3%;
+  height: 3%;
+  margin-left: 1%;
+  margin-top: 23%;
+}
+#gmail {
+  width: 3%;
+  height: 3%;
+  margin-left: 1%;
+  margin-top: 23%;
 }
 #cp {
   font-size: 5px;
