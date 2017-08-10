@@ -42,7 +42,7 @@ users.get('/:id', (req, res)=> {
 })
 //Route to get to edit page
 users.get('/:id/edit', (req, res)=> {
-  if(req.sessions.logged){
+  if(req.session.logged){
     User.findById(req.params.id, (err, foundUser)=> {
       res.render('users/edit.ejs', {
         user: foundUser
