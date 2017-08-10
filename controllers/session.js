@@ -20,11 +20,9 @@ router.post('/login', (req, res, next)=> {
         req.session.message = ''
         req.session.username = req.body.username
         req.session.logged = true
-        console.log(req.session, req.body);
 
         res.redirect('/users/' + user._id + '/edit')
       } else {
-        console.log('else in bcrypt');
         req.session.message = "Username or password are incorrect"
         res.redirect('/sessions/login')
       }
@@ -48,7 +46,6 @@ router.post('/register', (req, res, next)=> {
 
   //put password into db
   User.create(userDbEntry, (err, user)=> {
-    console.log(user);
     //set up session here so we can use same code we did for the login
     req.session.username = user.username
     req.session.logged = true
