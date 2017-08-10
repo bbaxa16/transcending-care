@@ -24,6 +24,25 @@ a {
 a:hover {
   color: white;
 }
+section {
+  display: flex;
+  flex-flow: column;
+
+}
+#site {
+  color: #ffffff;
+  background: #053d63;
+  margin: auto;
+  width: 40%;
+  height: 50%;
+  text-align: center;
+  border-radius: 3%;
+  font-size: 12px;
+  margin-top: 5%;
+}
+p {
+  margin: 1%;
+}
 footer {
   background: black;
   color: white;
