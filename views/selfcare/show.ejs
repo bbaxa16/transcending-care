@@ -2,14 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="/css/selfcare/show.css">
+    <% include ../partials/head.ejs %>
   </head>
   <body>
-    <h1>show page for <%=selfcare.title%></h1>
-    <a href="/selfcare/<%=selfcare._id%>/edit"><button>Edit</button></a>
+    <header>
+      <h1>transcending care</h1>
+      <a href='/sessions/logout'>  <button id="logout">log out</button></a>
+      <% include ../partials/header.ejs %>
+    </header>
+    <div id='tile'>
+          <a  href="/selfcare/<%=selfcare._id%>/edit"><button id='update'>edit</button></a>
+       <%=selfcare.title%><form action="/selfcare/<%=selfcare._id%>?_method=DELETE" method="post">
+        <input id='delete' type="submit" value="delete">
+      </form>
+      <img src='<%=selfcare.image%>'><br/>
+      <%=selfcare.example%><br/>
+      <br/>
+      <%=selfcare.description%><br/>
+      more resources: <a id='link' href='<%=selfcare.link%>'>here</a>
+    </div>
+
     <br/>
-    <form action="/selfcare/<%=selfcare._id%>?_method=DELETE" method="post">
-      <input type="submit" name="" value="delete">
-    </form>
+
+    <% include ../partials/footer.ejs %>
   </body>
 </html>
