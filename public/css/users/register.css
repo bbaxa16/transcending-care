@@ -46,23 +46,25 @@ footer {
   text-align: center;
   margin: auto;
   width: 100%;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;  
+  z-index: -1;
 }
 #twitter {
   width: 3%;
   height: 3%;
   margin-left: 1%;
   margin-top: 23%;
+  float: left;
 }
 #gmail {
   width: 3%;
   height: 3%;
   margin-left: 1%;
   margin-top: 23%;
+  float: left;
 }
 #cp {
   font-size: 5px;

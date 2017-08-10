@@ -15,8 +15,9 @@
       <%=user.name%> (<%=user.pronouns%>)<br/>
       <%=user.age%> years old<br/>
       <img src='<%=user.image%>'>
+      <a href="/users/<%=user._id%>/edit"><button id='update'>edit</button></a>
     </div>
-    <a href="/users/<%=user._id%>/edit"><button id='update'>edit</button></a>
+
       <% include ../partials/footer.ejs %>
   </body>
 </html>

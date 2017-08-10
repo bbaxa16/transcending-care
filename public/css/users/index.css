@@ -81,12 +81,14 @@ footer {
   height: 3%;
   margin-left: 1%;
   margin-top: 23%;
+  float: left;
 }
 #gmail {
   width: 3%;
   height: 3%;
   margin-left: 1%;
   margin-top: 23%;
+  float: left;
 }
 #cp {
   font-size: 5px;
