@@ -4,11 +4,15 @@ const Selfcare = require('../models/selfcare.js')
 
 //Route for index to self care tiles
 selfcareboard.get('/', (req, res)=> {
-  Selfcare.find({}, (err, foundSelfcare)=> {
-    res.render('selfcare/index.ejs', {
-      selfcare: foundSelfcare
+  if(req.session.logged){
+    Selfcare.find({}, (err, foundSelfcare)=> {
+      res.render('selfcare/index.ejs', {
+        selfcare: foundSelfcare
+      })
     })
-  })
+  } else {
+    res.redirect('/sessions/login')
+  }
 })
 //Post route for creating a new self care tile
 selfcareboard.post('/', (req, res)=> {
@@ -19,23 +23,35 @@ selfcareboard.post('/', (req, res)=> {
 })
 //Route to create a new self care tile
 selfcareboard.get('/new', (req, res)=> {
-  res.render('selfcare/new.ejs')
+  if(req.sessions.logged){
+    res.render('selfcare/new.ejs')
+  } else {
+    res.redirect('/sessions/login')
+  }
 })
 //Route to the show page
 selfcareboard.get('/:id', (req, res)=> {
-  Selfcare.findById(req.params.id, (err, foundSelfcare)=> {
-    res.render('selfcare/show.ejs', {
-      selfcare: foundSelfcare
+  if(req.sessions.logged){
+    Selfcare.findById(req.params.id, (err, foundSelfcare)=> {
+      res.render('selfcare/show.ejs', {
+        selfcare: foundSelfcare
+      })
     })
-  })
+  } else {
+      res.redirect('/sessions/login')
+  }
 })
 //Route to edit a self care tile.
 selfcareboard.get('/:id/edit', (req, res)=> {
-  Selfcare.findById(req.params.id, (err, foundSelfcare)=> {
+  if(req.sessions.logged){
+    Selfcare.findById(req.params.id, (err, foundSelfcare)=> {
       res.render('selfcare/edit.ejs', {
         selfcare: foundSelfcare
       })
-  })
+    })
+  } else {
+      res.redirect('/sessions/login')
+  }
 })
 //Put route to edit tile
 selfcareboard.put('/:id', (req, res)=> {

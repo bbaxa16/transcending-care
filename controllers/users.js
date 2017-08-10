@@ -4,11 +4,15 @@ const User = require('../models/users.js')
 
 //Route to users page
 users.get('/', (req, res)=> {
-  User.find({}, (err, foundUsers)=> {
-    res.render('users/index.ejs', {
-      users: foundUsers
+  if(req.session.logged){
+    User.find({}, (err, foundUsers)=> {
+      res.render('users/index.ejs', {
+        users: foundUsers
+      })
     })
-  })
+  } else {
+    res.redirect('/sessions/login')
+  }
 })
 //Post route for creating a new user
 users.post('/', (req, res)=> {
@@ -18,23 +22,35 @@ users.post('/', (req, res)=> {
 })
 //Route to create a new user page
 users.get('/new', (req, res)=> {
-  res.render('users/new.ejs')
+  if(req.session.logged){
+    res.render('users/new.ejs')
+  } else {
+    res.redirect('/sessions/login')
+  }
 })
 //Route for user show page
 users.get('/:id', (req, res)=> {
-  User.findById(req.params.id, (err, foundUser)=> {
+  if(req.session.logged){
+    User.findById(req.params.id, (err, foundUser)=> {
       res.render('users/show.ejs', {
         user: foundUser
       })
     })
-  })
+  } else {
+    res.redirect('/sessions/login')
+  }
+})
 //Route to get to edit page
 users.get('/:id/edit', (req, res)=> {
-  User.findById(req.params.id, (err, foundUser)=> {
-    res.render('users/edit.ejs', {
-      user: foundUser
+  if(req.sessions.logged){
+    User.findById(req.params.id, (err, foundUser)=> {
+      res.render('users/edit.ejs', {
+        user: foundUser
+      })
     })
-  })
+  } else {
+    res.redirect('/sessions/login')
+  }
 })
 //Put route for updating user
 users.put('/:id', (req, res)=> {
