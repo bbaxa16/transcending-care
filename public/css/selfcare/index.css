@@ -5,7 +5,6 @@ body {
   background-color: #053d63;
   background-image: url('http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg');
   background-size: cover;
-  text-align: center;
   color: #053d63;
 }
 header {
@@ -40,29 +39,46 @@ ul li {
 .nav:hover {
   color: #053d63;
 }
-section {
+.info {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+img {
+  width: 50%;
+  height: 50%;
+  border-radius: 2%;
+}
+#update {
+  margin-top: 1%;
+  margin-left: 4%;
+  border-radius: 28px;
+  border: none;
+  color: #ffffff;
+  background: #053d63;
+  text-decoration: none;
+  padding: 0% .5%;
+}
+#update:hover {
+  color: #053d63;
+  background: #ffffff;
+}
+.subheader {
+  text-align: center;
+}
+.board {
+  width: 35%;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
-  width: 85%;
-  height: 85%;
 }
 .tiles {
-  margin: 2%;
-  width: 25%;
-  height: 25%;
-  background: #053d63;
+  background-color: #053d63;
   border-radius: 3%;
 }
 .showpage {
   text-decoration: none;
   color: #ffffff;
-}
-img {
-  width: 75%;
-  height: 75%;
-  border-radius: 2%;
 }
 footer {
   background: black;
@@ -75,6 +91,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: -1;
 }
 #twitter {
   width: 3%;

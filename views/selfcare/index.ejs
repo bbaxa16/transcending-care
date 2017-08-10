@@ -11,9 +11,11 @@
       <a href='/sessions/logout'><button id="logout">log out</button></a>
       <% include ../partials/header.ejs %>
     </header>
+    <section class='subheader'>
     <h1>self care tiles</h1>
     <a href="/selfcare/new"><button class='newpage'>New Self Care Tile</button></a>
-    <section>
+  </section>
+    <section class='board'>
       <% for(let i = 0; i < selfcare.length; i++){%>
       <div class='tiles'>
         <a class='showpage'href="/selfcare/<%=selfcare[i]._id%>">
@@ -23,8 +25,6 @@
         </div>
       <% } %>
     </section>
-    <footer>
       <% include ../partials/footer.ejs %>
-    </footer>
   </body>
 </html>
