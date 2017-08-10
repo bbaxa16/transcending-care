@@ -30,6 +30,10 @@ app.use(express.static('public'))
 app.get('/', (req, res)=> {
   res.render('index.ejs')
 })
+//Route to about page
+app.get('/about', (req, res)=> {
+  res.render('about.ejs')
+})
 
 //Connecting to mongo
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/transcending-care';
