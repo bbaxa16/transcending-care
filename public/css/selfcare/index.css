@@ -39,42 +39,44 @@ ul li {
 .nav:hover {
   color: #053d63;
 }
-.info {
-  width: 50%;
-  height: 50%;
-  margin: auto;
-}
 img {
   width: 50%;
   height: 50%;
   border-radius: 2%;
 }
-#update {
-  margin-top: 1%;
+.subheader {
+  text-align: center;
+}
+.newpage {
   margin-left: 4%;
   border-radius: 28px;
   border: none;
   color: #ffffff;
   background: #053d63;
   text-decoration: none;
-  padding: 0% .5%;
+  padding: .5%;
 }
-#update:hover {
+.newpage:hover {
   color: #053d63;
   background: #ffffff;
 }
-.subheader {
-  text-align: center;
-}
 .board {
-  width: 35%;
+  width: 70%;
+  height: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  margin-top: 2%;
 }
 .tiles {
   background-color: #053d63;
   border-radius: 3%;
+  text-align: center;
+  margin: auto;
+  font-size: 12px;
+  width: 35%;
+  height: 15%;
 }
 .showpage {
   text-decoration: none;
