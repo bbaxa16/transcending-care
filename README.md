@@ -9,7 +9,7 @@ description
 
 transcending care is a self care app that centers the voices of transgender, non-binary, and gender non-conforming folks. Users have the capability of creating a user account and sharing/viewing self care 'tiles' on different ways people in our community practice self care.
 
-languages/tools used: html, css, javascript, ejs, express, mongoose, mongo, mongod, github, heroku
+languages/tools used: html, css, javascript, ejs, express, mongoose, mongo, mongod, github, heroku, [MEN STACK]
 
 bugs/technical difficulties
 
