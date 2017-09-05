@@ -20,8 +20,8 @@
           <li><a class='nav' href=''>home</a></li> |
           <li><a class='nav' href=''>about</a></li> |
           <li><a class='nav' href=''>self care board</a></li> |
-          <li><a class='nav' href='' ng-click="ctrl.toggleLogin()">login</a></li>
-          <li><a class='nav' href='' ng-click="ctrl.toggleRegister()">register</a></li>
+          <li><a class='nav' href='' ng-click="ctrl.goToLogin()">login</a></li>
+          <li><a class='nav' href='' ng-click="ctrl.goToRegister()">register</a></li>
         </ul>
       </nav>
       <header>
@@ -32,16 +32,49 @@
           </div>
         </div>
       </header>
-      <div class="container text-center" ng-if="ctrl.loginDisplay">
-        <h1>LOGIN</h1>
+      <!-- Login/Register Forms this nginclude isnt working-->
+      <section ng-include="'./forms.html'"></section>
+      <!-- this will go in forms.html if we can get the ng-include to work -->
+      <!--  Login Form -->
+    <section>
+      <div class="text-center" ng-if=ctrl.loginDisplay>
+        <h1>Login</h1>
+        <form>
+          <div class="form-group">
+            <input class="form-control" type="email" placeholder="email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="password" placeholder="password">
+          </div>
+          <button type="submit" class="btn btn-primary" >Login</button>
+        </form>
+        <h5>{{ctrl.message}}</h5>
+        Don't have an account?
+        <button class="btn btn-default" ng-click="ctrl.toggleForms()">Sign up!</button>
       </div>
-      <div class="" ng-if="ctrl.registerDisplay">
-        <h1>REGISTER</h1>
-      </div>
+
+      <!-- Register Form -->
+      <div id="register" class="text-center" ng-if=ctrl.registerDisplay>
+        <h1>Sign Up Here</h1>
+        <form>
+          <div class="form-group">
+            <input class="form-control" type="email" placeholder="email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="password" placeholder="password">
+          </div>
+          <button type="submit" class="btn btn-primary" >Register</button>
+        </form>
+        <br/>
+        Already Registered?
+        <button class="btn btn-default" ng-click="ctrl.toggleForms()">Login</button>
+      </section>
     </section> <!--end of mainController-->
   </body>
   <footer class="footer">
-    <div class="container">
+    <div class="container text-center">
       <p>Made with &hearts; by Brooke Baxa</p>
     </div>
   </footer>
