@@ -1,6 +1,6 @@
-#transcending-care
+# transcending-care
 
-##team
+## team
 
 - Brooke Baxa
 - Alexandra Alday
