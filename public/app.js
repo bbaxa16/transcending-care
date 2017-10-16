@@ -9,6 +9,8 @@ app.controller('mainController', ['$http', function($http){
   		// users
 		this.user = {};
 		this.userLog = {};
+		this.showRegister = false;
+  		this.showLogin = false;
   		this.loggedin = false;
 
 		// create new account
@@ -39,7 +41,6 @@ app.controller('mainController', ['$http', function($http){
 		     	this.showLogin = false;
       			this.showRegister = false;
       			this.loggedin = true;
-      			this.getScores(this.user);
     		}.bind(this));
     	}
 
@@ -48,6 +49,31 @@ app.controller('mainController', ['$http', function($http){
 		  localStorage.clear('token');
 		  this.loggedin = false;
 		  location.reload();
+		}
+
+
+				// display/hide user forms
+		this.goRegister = function(){
+		  	this.showRegister = true;
+		    this.showLogin = false;
+		}
+		this.goLogin = function(){
+		    this.showLogin = true;
+		    this.showRegister = false;
+		}
+		this.registerForm = function(){
+		    if(this.showRegister) {
+		    }
+		    else {
+		      this.showRegister = !this.showRegister;
+		    }
+		}
+		this.loginForm = function(){
+		    if(this.showLogin){
+		    }
+		    else {
+		      this.showLogin = !this.showLogin;
+		    }
 		}
   
 }])

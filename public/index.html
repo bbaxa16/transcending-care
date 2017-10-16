@@ -71,7 +71,7 @@
             <li><a href="#">Forum</a></li>
             <li><a href="#">Login</a></li>
             <li><a href="#">Register</a></li>
-            <li><a href="#">Logout</a></li>
+            <li id="logout" ng-show="ctrl.loggedin" ng-click="ctrl.logout()"><a href="#">Logout</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -79,7 +79,8 @@
 
 
     <!-- register form -->
-      <form ng-hide="ctrl.loggedin">
+    <div id="register" ng-hide="ctrl.loggedin">
+      <form>
         <div class="form-group">
           <input class="form-control" type="username" ng-model="userReg.username" placeholder="username">
         </div>
@@ -90,9 +91,11 @@
         <br/>
         {{ ctrl.message }}
       </form>
+    </div>
 
     <!-- login form -->
-        <form ng-hide="ctrl.loggedin" ng-submit="ctrl.login(userLog)">
+      <div id="login" ng-hide="ctrl.loggedin"> 
+        <form ng-submit="ctrl.login(userLog)">
           <div class="form-group">
             <input class="form-control" type="username" ng-model="userLog.username" placeholder="username">
           </div>
